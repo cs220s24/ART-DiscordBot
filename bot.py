@@ -1,59 +1,35 @@
-from typing import Final
+# bot.py
 import os
-from dotenv import load_dotenv
+import random
+
 from discord import Intents, Client, Message
-from responses import get_response
+from dotenv import load_dotenv
 
-#Get Discord Token
-load_dotenv()
-TOKEN: Final[str] = os.getenv('DISCORD_TOKEN')
-
-#Sets up Bot
 intents: Intents = Intents.default()
 intents.message_content = True
 client: Client = Client(intents=intents)
 
-#Functionality
-async def send_message(message: Message, user_message: str) -> None:
-    if not user_message:
-        print('(Message was empty because intents are not enabled)')
-        return
-    
-    if is_private := user_message[0] == "?":
-        user_message = user_message[1:]
 
-    try:
-        response: str = get_response(user_message)
-        await message.author.send(response) if is_private else await message.channel.send(response)
-    except Exception as e:
-        print(e)
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
 
-
-# Handeling the startup for the bot
-        
 @client.event
-async def on_ready() -> None:
-    print(f'{client.user} is now running!')
+async def on_ready():
+    print(f'{client.user} has connected to Discord!')
 
-
-#Handeling incoming messages
 @client.event
-async def on_message(message: Message) -> None:
+async def on_message(message):
     if message.author == client.user:
         return
-    
-    username: str = str(message.author)
-    user_message: str = message.content
-    channel: str = str(message.channel)
 
-    print(f'[{channel}] {username}: "{user_message}"')
-    await send_message(message, user_message)
+    dogImages = ['dog1','dog2','dog3' ]
+    catImages = ['cat1','cat2','cat3' ]
 
+    if message.content == 'Cats':
+        response = random.choice(catImages)
+        await message.channel.send(response)
+    if message.content == 'Dogs':
+        response = random.choice(dogImages)
+        await message.channel.send(response)
 
-    # Main entry point
-    def main() -> None:
-        client.run(token=TOKEN)
-
-    
-    if __name__ == '__main__':
-        main()
+client.run(TOKEN)
