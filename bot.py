@@ -1,15 +1,9 @@
+from typing import Final
 import os
-
-import discord
 from dotenv import load_dotenv
+from discord import Intents, Client, Message
+#from responses import get_response
 
 load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
-
-client = discord.Client()
-
-@client.event
-async def on_ready():
-    print(f'{client.user} has connected to Discord!')
-
-client.run(TOKEN)
+TOKEN: Final[str] = os.getenv('DISCORD_TOKEN')
+print (TOKEN)
