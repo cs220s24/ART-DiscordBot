@@ -1,5 +1,4 @@
 import os
-import random
 import redis
 from discord import Intents, Client
 
@@ -31,6 +30,9 @@ dog_image_urls = [
 
 # Function to initialize the Redis database with cat and dog image URLs
 def initialize_database():
+    # Clear existing data
+    redis_client.flushdb()
+    # Add new URLs
     for image_url in cat_image_urls:
         redis_client.sadd('cats', image_url)
     for image_url in dog_image_urls:
