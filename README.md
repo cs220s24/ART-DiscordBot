@@ -22,8 +22,6 @@ Closing Bot
 
 Set Up on AWS
 --------------
-Set-Up Locally
----------------
 1. Run ```Sudo yum install git```
 2. Clone Github Repo
 3. Cd into ART-DiscordBot
