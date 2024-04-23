@@ -25,8 +25,8 @@ Resources Used
 * https://www.youtube.com/watch?v=UYJDKSah-Ww&t=356s
 * https://realpython.com/how-to-make-a-discord-bot-python/
 * https://discordpy.readthedocs.io/en/stable/
-* discord.com/developers
-* discord.com
+* https://discord.com/developers
+* https://discord.com
 * https://github.com/
 * https://redis.io
 
