@@ -7,10 +7,11 @@ Set-Up Locally
 1. Clone Github Repo into the perfered directory
 2. Cd into ART-DiscordBot
 3. Add .env file with
-DISCORD_TOKEN={Your Token Here and Remove {}}
+```
+DISCORD_TOKEN={Your Token Here}
 REDIS_HOST=localhost
 REDIS_PORT=6379
-
+ ```
 6. Run "python3 -m venv .venv"
 7. Run "pip install -r requirements.txt"
 8. Run "redis-server"
