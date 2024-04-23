@@ -9,7 +9,7 @@ Set-Up Locally
 3. Add .env file with DISCORD_TOKEN={Your Token Here and Remove {}}
 4. Run "python3 -m venv .venv"
 5. Run "pip install -r requirements.txt"
-6. Run "redis-server -daemonize yes"
+6. Run "redis-server"
 7. Run "python3 bot.py"
 
 Closing Bot
