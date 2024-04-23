@@ -10,10 +10,10 @@ Set-Up Locally
 ```
 DISCORD_TOKEN={Your Token Here}
  ```
-6. Run "python3 -m venv .venv"
-7. Run "pip install -r requirements.txt"
-8. Run "redis-server"
-9. Run "python3 bot.py"
+6. Run ```python3 -m venv .venv```
+7. Run ```pip install -r requirements.txt```
+8. Run ```redis-server```
+9. Run ```python3 bot.py```
 
 Closing Bot
 -------------
