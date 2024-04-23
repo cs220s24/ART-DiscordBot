@@ -9,8 +9,6 @@ Set-Up Locally
 3. Add .env file with
 ```
 DISCORD_TOKEN={Your Token Here}
-REDIS_HOST=localhost
-REDIS_PORT=6379
  ```
 6. Run "python3 -m venv .venv"
 7. Run "pip install -r requirements.txt"
