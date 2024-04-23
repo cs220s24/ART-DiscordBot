@@ -32,6 +32,6 @@ Resources Used
 
 Project By
 ------------
-Marena Abboud
-Giovanny Teran
-Vicente Rivera
+* Marena Abboud
+* Giovanny Teran
+* Vicente Rivera
