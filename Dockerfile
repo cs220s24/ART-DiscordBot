@@ -10,6 +10,7 @@ RUN .venv/bin/pip3 install -r requirements.txt
 
 # Copy bot.py
 COPY bot.py .
+COPY redis_utils.py .
 
 # Run the bot
 CMD .venv/bin/python3 bot.py
