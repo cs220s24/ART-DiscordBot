@@ -11,10 +11,7 @@ RUN .venv/bin/pip3 install -r requirements.txt
 # Copy bot.py
 COPY bot.py .
 
-# Expose the Redis default port
-EXPOSE 6379
-
-# Start Redis and run the bot
-CMD .venv/bin/redis-server --daemonize yes && .venv/bin/python3 bot.py
+# Run the bot
+CMD .venv/bin/python3 bot.py
 
 
