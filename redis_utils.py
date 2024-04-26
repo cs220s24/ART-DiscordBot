@@ -1,4 +1,9 @@
 import redis
+from dotenv import load_dotenv
+
+load_dotenv()
+
+host = os.getenv('REDIS_HOST')
 
 # Sample cat and dog image URLs from Imgur
 cat_image_urls = [
@@ -15,7 +20,7 @@ dog_image_urls = [
 
 # Function to initialize the Redis database with cat and dog image URLs
 def initialize_database():
-    redis_client = redis.StrictRedis(host='localhost', port=6379, db=0)
+    redis_client = redis.StrictRedis(host=host, port=6379, db=0)
     # Clear existing data
     redis_client.flushdb()
     # Add new URLs
