@@ -5,6 +5,8 @@ from redis_utils import initialize_database
 
 load_dotenv()
 
+host = os.getenv('REDIS_HOST')
+
 intents = Intents.default()
 intents.message_content = True
 client = Client(intents=intents)
@@ -23,7 +25,7 @@ async def on_message(message):
 
     if message.content == 'Cats':
         from redis import StrictRedis
-        redis_client = StrictRedis(host='localhost', port=6379, db=0)
+        redis_client = StrictRedis(host=host, port=6379, db=0)
         image_url = redis_client.srandmember('cats')
         if image_url:
             await message.channel.send(image_url.decode('utf-8'))
@@ -31,7 +33,7 @@ async def on_message(message):
             await message.channel.send("No cat images available.")
     elif message.content == 'Dogs':
         from redis import StrictRedis
-        redis_client = StrictRedis(host='localhost', port=6379, db=0)
+        redis_client = StrictRedis(host=host, port=6379, db=0)
         image_url = redis_client.srandmember('dogs')
         if image_url:
             await message.channel.send(image_url.decode('utf-8'))
