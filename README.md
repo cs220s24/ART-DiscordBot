@@ -41,15 +41,17 @@ Setup on AWS through Docker
 -
 1. Run ```Sudo yum install -y git```
 2. Clone repo
-3. Run ```chmod +x setup.sh``` to add executable permissions
-4. Run ```./setup.sh```
-5. Add .env with
+3. CD into ART-DiscordBot
+4. Run ```chmod +x setup.sh``` and ```chmod +x startbot.sh``` to add executable permissions
+5. Run ```./setup.sh```
+6. Add .env with
  ```
 DISCORD_TOKEN={Your Token Here}
 REDIS_HOST=redis
  ```
 5. Log out and log back into EC2 Instance
-6. 
+6. CD into ART-DiscordBot
+7. Run ```./startbot.sh```
 
 Resources Used
 -----------
