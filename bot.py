@@ -11,19 +11,6 @@ intents = Intents.default()
 intents.message_content = True
 client = Client(intents=intents)
 
-@client.event
-async def on_ready():
-    print(f'{client.user} has connected to Discord!')
-    # Initialize the database when the bot is ready
-    print('Database initialized with cat and dog image URLs.')
-
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-
-
-    
     if message.content == 'Cats':
         from redis import StrictRedis
         redis_client = StrictRedis(host=host, port=6379, db=0)
@@ -40,6 +27,6 @@ async def on_message(message):
             await message.channel.send(image_url.decode('utf-8'))
         else:
             await message.channel.send("No dog images available.")
-
+            
 TOKEN = os.getenv('DISCORD_TOKEN')
 client.run(TOKEN)
