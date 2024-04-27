@@ -36,6 +36,18 @@ REDIS_HOST=redis
 8. Run ```redis6-server```
 9. Run ```python3 bot.py```
 
+Setup on AWS through Docker
+-
+1. Run ```Sudo yum install -y git```
+2. Clone repo
+3. Run ```./setup.sh```
+4. Add .env with
+ ```
+DISCORD_TOKEN={Your Token Here}
+REDIS_HOST=redis
+ ```
+5. Log out and log back into EC2 Instance
+
 Resources Used
 -----------
 * https://www.youtube.com/watch?v=UYJDKSah-Ww&t=356s
