@@ -34,18 +34,11 @@ DISCORD_TOKEN={Your Token Here}
 REDIS_HOST=redis
  ```
 6. Run ```python3 -m venv .venv```
-<<<<<<< HEAD
 7. Run ```source .venv/bin/activate```
-8. Run ```pip install -r awsrequirements.txt```
+8. Run ```pip install -r requirements.txt```
 9. Run ```Sudo yum install -y redis6```
 10. Run ```redis6-server```
 11. Run ```python3 bot.py```
-=======
-7. Run ```pip install -r requirements.txt```
-8. Run ```Sudo yum install redis6```
-9. Run ```redis6-server```
-10. Run ```python3 bot.py```
->>>>>>> 1fed4e6bf4062a41b35cee492d292f0ee933dd1e
 
 Setup on AWS through Docker
 -
