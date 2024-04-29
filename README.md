@@ -12,9 +12,10 @@ DISCORD_TOKEN={Your Token Here}
 REDIS_HOST=localhost
  ```
 6. Run ```python3 -m venv .venv```
-7. Run ```pip install -r requirements.txt```
-8. Run ```redis-server```
-9. Run ```python3 bot.py```
+7. Run ```source .venv/bin/activate```
+8. Run ```pip install -r requirements.txt```
+9. Run ```redis-server``` in a new terminal window
+10. Run ```python3 bot.py```
 
 Closing Bot
 -------------
