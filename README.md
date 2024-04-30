@@ -2,6 +2,13 @@ Art Display Discord Bot
 ------------------------
 This project is for running a discord bot that display art using discord.py
 
+Setup Discord Bot
+- go to https://discord.com/developers
+- Create a bot
+- Get the bot token and save it safely
+- In bot turn on Message Content Intent
+
+
 Set-Up Locally
 ---------------
 1. Clone Github Repo into the perfered directory
