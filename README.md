@@ -65,6 +65,9 @@ Resources Used
 * https://discord.com
 * https://github.com/
 * https://redis.io
+* https://www.docker.com
+* https://docs.docker.com
+* https://aws.amazon.com
 
 Project By
 ------------
